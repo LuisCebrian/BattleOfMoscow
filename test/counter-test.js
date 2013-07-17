@@ -7,8 +7,17 @@ buster.testCase("Counter", {
         assert.equals(8, counter.getStrength());
     },
 
-    "states the obvious": function () {
-        assert(true);
+    "Testear la capacidad de movimiento": function () {
+        // Given 
+        var counter = new BoM.Counter(8,4);
+
+        // When
+        var obtained = counter.getMovement();
+        
+        // Then
+        var expected = 4;
+        assert.equals(expected,obtained);
+        assert.equals(8,counter.getStrength());
     }
 });
 
